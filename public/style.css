@@ -1,0 +1,6 @@
+.hovert:hover{
+	color: white !important;
+}
+li>.hovert#active{
+	color: white;
+}
