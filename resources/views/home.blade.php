@@ -8,9 +8,9 @@
     <section class="hero-wrap-layout1 bg-color-light-1 transition-default">
         <div class="container">
             <div class="hero-box-layout1">
-                <h1 class="title h1-large">Hey, We’re Blogxpress.<span> See Our Thoughts, Stories And Ideas.</span></h1>
-                <form action="#" class="search-form radius-default">
-                    <input type="email" class="email-input" placeholder="Search">
+                <h1 class="title h1-large">Yashil taraqqiyot.<span> Barqaror kelajak sari.</span></h1>
+                <form action="{{ route("blog.search") }}" class="search-form radius-default" method="GET">
+                    <input type="text" name="q" class="email-input" placeholder="Qidiruv...">
                     <button type="submit" class="axil-btn"><i class="regular-search-02"></i>
                     </button>
                 </form>
@@ -61,7 +61,7 @@
     <section class="post-wrap-layout21 space-top-50 bg-color-light-1 transition-default">
         <div class="container">
             <div class="section-heading heading-style-1">
-                <h2 class="title">Top Stories</h2>
+                <h2 class="title">Ommabob </h2>
                 <a href="{{ route("blog.byCategory", ["type" => "top"]) }}" class="link-wrap">
                     Barchasi
                     <span class="icon-holder">
@@ -122,7 +122,7 @@
     <section class="post-wrap-layout20 space-top-50 space-bottom-60 bg-color-light-1 transition-default">
         <div class="container">
             <div class="section-heading heading-style-1">
-                <h2 class="title">Recent Articles</h2>
+                <h2 class="title">Oxirgi maqolalar</h2>
                 <a href="{{ route("blog.byCategory", ["type" => "view"]) }}" class="link-wrap">
                     Barchasi
                     <span class="icon-holder">
@@ -222,7 +222,7 @@
     <section class="post-wrap-layout20 space-top-50 bg-color-light-1 transition-default">
         <div class="container">
             <div class="section-heading heading-style-1">
-                <h2 class="title">Most Popular</h2>
+                <h2 class="title">Eng mashhur</h2>
             </div>
             <div class="row g-3">
                 @foreach($populars as $popular)

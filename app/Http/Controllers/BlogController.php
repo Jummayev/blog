@@ -15,7 +15,7 @@ class BlogController extends Controller
         $banners = Blog::query()->where("is_banner", true)->limit(15)->get();
         $tops = Blog::query()->where("is_top", true)->limit(15)->get();
         $populars = Blog::query()->where("is_popular", true)->limit(15)->get();
-        $reads = Blog::query()->orderByDesc("view_count")->limit(15)->get();
+        $reads = Blog::query()->orderByDesc("view_count")->limit(4)->get();
 
         return view("home", compact("banners", "tops", "populars", "reads"));
     }
@@ -37,7 +37,8 @@ class BlogController extends Controller
     {
         $blog->view_count += 1;
         $blog->save();
-        return view("one", compact("blog"));
+        $blogs = Blog::query()->where("type", $blog->type)->paginate();
+        return view("one", compact("blog", "blogs"));
     }
 
     /**
@@ -49,10 +50,21 @@ class BlogController extends Controller
         return view("list", compact("blogs", "tag"));
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function byType($type)
+    {
+        $blogs = Blog::query()->where('type', $type)->paginate();
+        return view("list", compact("blogs", "type"));
+    }
+
     public function search(Request $request)
     {
-        $search = $request->get("q");
-        $blogs = Blog::query()->where('tag', "LIKE", $search)->paginate();
+        $search = strtolower($request->get("q"));
+        $blogs = Blog::query()
+            ->whereRaw("LOWER(title) LIKE '%$search%' or LOWER(tag) LIKE '%$search%' or LOWER(description) LIKE '%$search%'")
+            ->paginate();
         return view("list", compact("blogs", "search"));
     }
 }

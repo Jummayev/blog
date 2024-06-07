@@ -10,8 +10,12 @@ class Type extends Model
     public static function options()
     {
         return [
-           1 => "Atom energeya",
-           2 => "Qayta tiklanuvchi energeya",
+           1 => "AES",
+           2 => "GES",
+           3 => "Shamol ES",
+           4 => "Quyosh ES",
+           5 => "Qiziqarli",
+           6 => "Mening Bloglarim",
         ];
     }
     public static function status()

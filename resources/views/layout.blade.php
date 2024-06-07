@@ -5,9 +5,8 @@
     <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>BlogXpress | Blog and News Minimal Responsive HTML Template</title>
-    <meta name="description" content="Author: AxilTheme, Template: HTML, Category: Blog, Price: $13.00,
-    Length: 23 pages">
+    <title>Yashil energetika</title>
+    <meta name="description" content="Author: Yashil energetika">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset("log.svg") }}">
@@ -17,16 +16,17 @@
     <link rel="stylesheet" href="{{ asset("assets/css/vendor/magnific-popup.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/css/vendor/bootstrap.min.css") }}">
     <link rel="stylesheet" href="{{ asset("style.css") }}">
+    <meta name="google-site-verification" content="BEx8fjvxH7L1oR7UeHEFPe1vuspU8KkP0QKErIs0vMs" />
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
 
 
     <!-- Site Stylesheet -->
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="{{ asset("assets/css/app.css") }}">
 
 </head>
 
 <body class="mobilemenu-active">
 <!--[if lte IE 9]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
 <div id="preloader" class="preloader">
     <div class="loader-wrap">
@@ -66,10 +66,12 @@
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="logo-holder">
                         <div class="d-md-block d-none">
-                            <a href="/" class="link-wrap desktop-logo img-height-100" aria-label="Site Logo"><img width="100" src="{{ asset("log.svg") }}" alt="logo"></a>
+                            <a href="/" class="link-wrap desktop-logo img-height-100" aria-label="Site Logo">
+                                <img width="100" src="{{ asset("log.svg") }}" alt="logo"></a>
                         </div>
                         <div class="d-md-none d-block">
-                            <a href="/" class="link-wrap mobile-logo img-height-100" aria-label="Site Logo"><img width="86" height="31" src="{{ asset("log.svg") }}" alt="logo"></a>
+                            <a href="/" class="link-wrap mobile-logo img-height-100" aria-label="Site Logo">
+                                <img width="86" height="31" src="{{ asset("log.svg") }}" alt="logo"></a>
                         </div>
                     </div>
                     <!-- Start Mainmenu Nav -->
@@ -84,13 +86,25 @@
                         <nav id="dropdown" class="template-main-menu">
                             <ul class="menu">
                                 <li class="menu-item">
-                                    <a class="hovert" id="active" href="#">Asosiy</a>
+                                    <a class="hovert" id="active" href="/">Asosiy</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="hovert" href="{{ route("list") }}">Atom energeya</a>
+                                    <a class="hovert" href="{{ route("blog.type", ["type"=> 1]) }}">AES</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="hovert" href="{{ route("list") }}">Qayta tiklanuvchi energeya</a>
+                                    <a class="hovert" href="{{ route("blog.type", ["type"=> 2]) }}">GES</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="hovert" href="{{ route("blog.type", ["type"=> 3]) }}">Shamol ES</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="hovert" href="{{ route("blog.type", ["type"=> 4]) }}">Quyosh ES</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="hovert" href="{{ route("blog.type", ["type"=> 5]) }}">Qiziqarli</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="hovert" href="{{ route("blog.type", ["type"=> 6]) }}">Mening Bloglarim</a>
                                 </li>
                             </ul>
                         </nav>
@@ -127,27 +141,30 @@
                         <div class="footer-widget">
                             <div class="footer-about">
                                 <div class="logo-holder">
-                                    <a href="/" class="link-wrap img-height-100" aria-label="Site Logo"><img width="131" height="47" src="assets/media/logo-light.svg" alt="logo"></a>
+                                    <a href="/" class="link-wrap img-height-100" aria-label="Site Logo">
+                                        <img width="131" height="47" src="{{ asset("log.svg") }}" alt="logo"></a>
                                 </div>
-                                <p class="description">Expert insights, industry trends, and inspiring stories that help you live and work on your own terms. Expert insights, industry trends.</p>
+                                <p class="description">
+                                    Yashil taraqqiyot. Barqaror kelajak sari.
+                                    </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-6 col-12">
                         <div class="footer-widget">
-                            <h3 class="widget-title h3-small text-center">Categories</h3>
+                            <h3 class="widget-title h3-small text-center">Bo'limlar</h3>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="{{ route("list") }}">Technology</a></li>
-                                    <li><a href="{{ route("list") }}">Politics</a></li>
+                                    <li><a href="{{ route("blog.type", ["type"=> 1]) }}">AES</a></li>
+                                    <li><a href="{{ route("blog.type", ["type"=> 2]) }}">GES</a></li>
                                 </ul>
                                 <ul>
-                                    <li><a href="{{ route("list") }}">Business Leaders</a></li>
-                                    <li><a href="{{ route("list") }}">Markets</a></li>
+                                    <li><a href="{{ route("blog.type", ["type"=> 3]) }}">Shamol ES</a></li>
+                                    <li><a href="{{ route("blog.type", ["type"=> 4]) }}">Quyosh ES</a></li>
                                 </ul>
                                 <ul>
-                                    <li><a href="{{ route("list") }}">Music News</a></li>
-                                    <li><a href="{{ route("list") }}">Style News</a></li>
+                                    <li><a href="{{ route("blog.type", ["type"=> 5]) }}">Qiziqarli</a></li>
+                                    <li><a href="{{ route("blog.type", ["type"=> 6]) }}">Mening Bloglarim</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -157,7 +174,7 @@
         </div>
         <div class="footer-bottom">
             <div class="footer-copyright">
-                <span class="copyright-text">© 2023. All rights reserved by <a href="https://axilthemes.com/" target="_blank">Axilthemes</a>.</span>
+{{--                <span class="copyright-text">© 2024. All rights reserved by <a href="https://yashilenergetika.uz/" target="_blank">Yashilenergetika</a>.</span>--}}
             </div>
         </div>
     </footer>
@@ -168,7 +185,7 @@
     <div class="container">
         <button type="button" class="close">×</button>
         <form class="search-form">
-            <input type="search" value="" placeholder="Search" />
+            <input type="search" value="" placeholder="Qidiruv.." />
             <button type="submit" class="search-btn">
                 <i class="regular-search-02"></i>
             </button>
@@ -193,6 +210,8 @@
 
 <!-- Site Scripts -->
 <script src="{{ asset("assets/js/app.js") }}"></script>
+<script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+
 </body>
 
 </html>

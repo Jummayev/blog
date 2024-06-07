@@ -10,6 +10,7 @@ class Blog extends Model
     protected $fillable = [
       "title",
       "image",
+      "video",
       "tag",
       "description",
       "is_top",
@@ -18,5 +19,6 @@ class Blog extends Model
       "type",
       "view_count",
       "status",
+      "created_at",
     ];
 }

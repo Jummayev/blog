@@ -50,7 +50,6 @@ class BlogResource extends Resource
                 Forms\Components\Toggle::make('is_popular')
                     ->required()
                     ->default(0),
-
             ]);
     }
 

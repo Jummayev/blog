@@ -17,9 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/category/{type}', [BlogController::class, 'byCategory'])->name('blog.byCategory');
 Route::get('/tags/{tag}', [BlogController::class, 'byTag'])->name('blog.tags');
+Route::get('/type/{type}', [BlogController::class, 'byType'])->name('blog.type');
 Route::get('/post/{blog}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/search/', [BlogController::class, 'search'])->name('blog.search');
-Route::get('/searcwerewwerwh/', [BlogController::class, 'search'])->name('list');
-Route::get('/swerwerearch/', [BlogController::class, 'search'])->name('one');
 
 

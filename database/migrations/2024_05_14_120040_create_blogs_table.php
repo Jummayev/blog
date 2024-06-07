@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->text("title");
             $table->string("image");
+            $table->string("video")->nullable();
             $table->string("tag");
             $table->text("description");
             $table->integer("is_top")->default(0);
